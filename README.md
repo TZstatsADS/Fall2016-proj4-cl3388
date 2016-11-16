@@ -10,7 +10,7 @@ Term: Fall 2016
 + [Data description](doc/readme.html)
 + Contributor's name: Chang Liu(cl3388)
 + Projec title: Association mining of music and text
-+ Project summary: Sinces words of lyrics are highly correlated, I use Topic Model to get clusters of words and get ranks of words inside each cluster. Then we exact songs features from h5 data and use these data as predictors to predict which lyric cluster a song is belonged to.
++ Project summary: Since words of lyrics are highly correlated, I use Topic Model to get clusters of words and get ranks of words inside each cluster. Then we exact songs features from h5 data and use these data as predictors to predict which lyric cluster a song is belonged to.
 	
 Following [suggestions](http://nicercode.github.io/blog/2013-04-05-projects/) by [RICH FITZJOHN](http://nicercode.github.io/about/#Team) (@richfitz). This folder is orgarnized as follows.
 
