@@ -1,5 +1,5 @@
 load("C:/Users/LIU/Desktop/ADS/P4/lyr.RData")
-lyr <- lyr[,-c(2,3,6:30)]
+#lyr <- lyr[,-c(2,3,6:30)]
 library(tm)
 f_words<-colSums(lyr[,-1])
 stop_words <- stopwords("English")
