@@ -5,12 +5,16 @@ files <- dir(recursive=TRUE, full.names=TRUE)
 #biocLite("rhdf5")
 library(rhdf5)
 ptm <- proc.time()
-a_songs <- c()
+analysis <- c()
 for(file in files){
   dfanal <- h5read(file, "/analysis")
-  a_song <- dfanal$songs
-  a_songs <- rbind(a_songs,a_song)
+  temp <- c()
+  for(i in 1:length(names(dfanal))){
+    temp[i] <- mean(dfanal[[i]])
+  }
+  analysis <- rbind(analysis,temp)
 }
+colnames(analysis) <- names(dfanal)
 proc.time() - ptm
-songs <- cbind(files,a_songs)
-save(songs,file="C:/Users/LIU/Desktop/ADS/P4/songs.RData")
+songs <- cbind(files,analysis)
+save(test_dat,file="C:/Users/LIU/Desktop/ADS/P4/songs.RData")
